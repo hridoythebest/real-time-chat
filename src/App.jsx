@@ -69,7 +69,7 @@ const sentMessages = async () =>{
           <button onClick={() => auth.signOut()}>LogOut</button>
   
           {messages.map((msg) => (
-            <div className={`message ${msg.data.uid=== user.uid ? 'current' : 'other'}`}>
+            <div className={`message ${msg.data.uid=== user.uid ? 'current' : 'other'}`} key={msg.key}>
               <img src={msg.data.photoURL} alt="" />
               {msg.data.text}
             </div>
